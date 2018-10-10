@@ -43,6 +43,8 @@ input             clk
   end
 endmodule
 
+// 32 register with enable, positive edge triggered
+// Ignores inputs, just outputs 32b'0
 module register32zero
 (
 output reg [31:0] q,

@@ -11,3 +11,11 @@ Available [here](register.v). I tried using a generate block to make a bunch of 
 ## Deliverable 3: `register32zero` module
 
 Also available [here](register.v). Like for `register32`, I had a hard time making this work with `q` still being a `reg`. I ended up putting it in an `always` block that's always true, which might loop forever. Not sure if it'll work. I'll probably ask for help before it's due.
+
+## Deliverable 4: `mux32to1by1` module
+
+Available [here](mux.v). This was really easy in behavioral Verilog.
+
+## Deliverable 5: `mux32to1by32` module
+
+Available [here](mux.v). I generated all the repetitive bits with Python, which was a lot easier. :)
