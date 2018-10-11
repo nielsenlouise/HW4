@@ -34,7 +34,7 @@ for i in range(32):
   print "assign mux[" + str(i) + "] = input" + str(i) + ";"
 ```
 
-Tested [here](mux.t.v). I tested that, for every address, the output is the addressth input.
+Tested [here](mux.t.v). I tested that, for every address, the output is the addressth input. I chose to do this exhaustively because it's kind of easy, using Python, but in the future I might choose tests more selectively.
 
 Here is how I generated random values for inputs:
 ```python
@@ -65,3 +65,5 @@ Take the example `a << b`. `<<` means left shift. We shift `a` to the left by `b
 In the case of `enable << address`, consider the possible cases of `enable`. When `enable` is `0`, `enable << address` will be 0. When `enable` is `1`, `enable << address` will be `1` followed by `address` `0`s. This means the decoder will set outputs `0` to `address - 1` as `0`, and output `address` to `1` (note the careful not-off-by-1 arithmetic here). Presumably, behavioral Verilog will make something smaller than 32 bits (as `enable << address` will often be) and left-fill/pad with `0`s, so outputs `address + 1` to `31` will all also be `0`.
 
 Hooray, decoder.
+
+I didn't test this because I trust the provided implementation.
