@@ -67,3 +67,34 @@ In the case of `enable << address`, consider the possible cases of `enable`. Whe
 Hooray, decoder.
 
 I didn't test this because I trust the provided implementation.
+
+## Deliverable 7: `regfile` module
+
+Available [here](regfile.v).
+
+I used this Python to generate out wires for registers 1 to 31:
+```python
+for i in range(1,32):
+  print "wire [31:0] reg" + str(i) + "_out;"
+```
+
+And this to generate registers 1 to 31:
+```python
+for i in range(1,32):
+  print "// Register " + str(i)
+  print "register32 reg" + str(i) + "(.q(reg" + str(i) + "_out),"
+  print "                   .d(WriteData),"
+  print "                   .wrenable(decoder_out[" + str(i) + "]),"
+  print "                   .clk(Clk));"
+```
+
+And this to generate mux inputs:
+```python
+for i in range(32):
+  print "reg" + str(i) + "_out, ",
+```
+
+
+## Deliverable 8: `regfile` test bench
+
+Available [here](regfile.t.v).
