@@ -1,0 +1,654 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x1efcbc0 .scope module, "mux32to1by1" "mux32to1by1" 2 2;
+ .timescale 0 0;
+v0x1f25bd0_0 .net "address", 4 0, C4<zzzzz>; 0 drivers
+v0x1f8d040_0 .net "inputs", 31 0, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; 0 drivers
+v0x1f8d0e0_0 .net "out", 0 0, L_0x1f90a30; 1 drivers
+L_0x1f90a30 .part/v C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>, C4<zzzzz>, 1;
+S_0x1f2a240 .scope module, "testmux" "testmux" 3 7;
+ .timescale 0 0;
+v0x1f8eb10_0 .var "address", 4 0;
+v0x1f8f1f0_0 .var "dutpassed", 0 0;
+v0x1f8f270_0 .var "input0", 31 0;
+v0x1f8f2f0_0 .var "input1", 31 0;
+v0x1f8f3a0_0 .var "input10", 31 0;
+v0x1f8f450_0 .var "input11", 31 0;
+v0x1f8f4d0_0 .var "input12", 31 0;
+v0x1f8f580_0 .var "input13", 31 0;
+v0x1f8f630_0 .var "input14", 31 0;
+v0x1f8f6e0_0 .var "input15", 31 0;
+v0x1f8f790_0 .var "input16", 31 0;
+v0x1f8f840_0 .var "input17", 31 0;
+v0x1f8f8f0_0 .var "input18", 31 0;
+v0x1f8f9a0_0 .var "input19", 31 0;
+v0x1f8fad0_0 .var "input2", 31 0;
+v0x1f8fb80_0 .var "input20", 31 0;
+v0x1f8fa20_0 .var "input21", 31 0;
+v0x1f8fcf0_0 .var "input22", 31 0;
+v0x1f8fe10_0 .var "input23", 31 0;
+v0x1f8fe90_0 .var "input24", 31 0;
+v0x1f8fd70_0 .var "input25", 31 0;
+v0x1f8fff0_0 .var "input26", 31 0;
+v0x1f8ff40_0 .var "input27", 31 0;
+v0x1f90130_0 .var "input28", 31 0;
+v0x1f90070_0 .var "input29", 31 0;
+v0x1f90280_0 .var "input3", 31 0;
+v0x1f901e0_0 .var "input30", 31 0;
+v0x1f90410_0 .var "input31", 31 0;
+v0x1f90300_0 .var "input4", 31 0;
+v0x1f90580_0 .var "input5", 31 0;
+v0x1f90490_0 .var "input6", 31 0;
+v0x1f90700_0 .var "input7", 31 0;
+v0x1f90600_0 .var "input8", 31 0;
+v0x1f90890_0 .var "input9", 31 0;
+v0x1f90780_0 .net "out", 31 0, L_0x1f92420; 1 drivers
+S_0x1f8d180 .scope module, "dut" "mux32to1by32" 3 25, 2 14, S_0x1f2a240;
+ .timescale 0 0;
+L_0x1f8d950 .functor BUFZ 32, v0x1f8f270_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f90b00 .functor BUFZ 32, v0x1f8f2f0_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f90bb0 .functor BUFZ 32, v0x1f8fad0_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f90c60 .functor BUFZ 32, v0x1f90280_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f90d10 .functor BUFZ 32, v0x1f90300_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f90df0 .functor BUFZ 32, v0x1f90580_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f90ea0 .functor BUFZ 32, v0x1f90490_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f90f50 .functor BUFZ 32, v0x1f90700_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f91050 .functor BUFZ 32, v0x1f90600_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f91100 .functor BUFZ 32, v0x1f90890_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f91210 .functor BUFZ 32, v0x1f8f3a0_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f91270 .functor BUFZ 32, v0x1f8f450_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f911b0 .functor BUFZ 32, v0x1f8f4d0_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f91370 .functor BUFZ 32, v0x1f8f580_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f914a0 .functor BUFZ 32, v0x1f8f630_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f91550 .functor BUFZ 32, v0x1f8f6e0_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f91690 .functor BUFZ 32, v0x1f8f790_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f91740 .functor BUFZ 32, v0x1f8f840_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f91600 .functor BUFZ 32, v0x1f8f8f0_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f918e0 .functor BUFZ 32, v0x1f8f9a0_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f917f0 .functor BUFZ 32, v0x1f8fb80_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f91a90 .functor BUFZ 32, v0x1f8fa20_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f91990 .functor BUFZ 32, v0x1f8fcf0_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f91c00 .functor BUFZ 32, v0x1f8fe10_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f91b40 .functor BUFZ 32, v0x1f8fe90_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f91d80 .functor BUFZ 32, v0x1f8fd70_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f91cb0 .functor BUFZ 32, v0x1f8fff0_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f91f10 .functor BUFZ 32, v0x1f8ff40_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f91e30 .functor BUFZ 32, v0x1f90130_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f920b0 .functor BUFZ 32, v0x1f90070_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f91fc0 .functor BUFZ 32, v0x1f901e0_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f92260 .functor BUFZ 32, v0x1f90410_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x1f92420 .functor BUFZ 32, L_0x1f92160, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+v0x1f8d270_0 .net *"_s96", 31 0, L_0x1f92160; 1 drivers
+v0x1f8d330_0 .net "address", 4 0, v0x1f8eb10_0; 1 drivers
+v0x1f8d3d0_0 .net "input0", 31 0, v0x1f8f270_0; 1 drivers
+v0x1f8d470_0 .net "input1", 31 0, v0x1f8f2f0_0; 1 drivers
+v0x1f8d520_0 .net "input10", 31 0, v0x1f8f3a0_0; 1 drivers
+v0x1f8d5c0_0 .net "input11", 31 0, v0x1f8f450_0; 1 drivers
+v0x1f8d6a0_0 .net "input12", 31 0, v0x1f8f4d0_0; 1 drivers
+v0x1f8d740_0 .net "input13", 31 0, v0x1f8f580_0; 1 drivers
+v0x1f8d830_0 .net "input14", 31 0, v0x1f8f630_0; 1 drivers
+v0x1f8d8d0_0 .net "input15", 31 0, v0x1f8f6e0_0; 1 drivers
+v0x1f8d9d0_0 .net "input16", 31 0, v0x1f8f790_0; 1 drivers
+v0x1f8da70_0 .net "input17", 31 0, v0x1f8f840_0; 1 drivers
+v0x1f8db80_0 .net "input18", 31 0, v0x1f8f8f0_0; 1 drivers
+v0x1f8dc20_0 .net "input19", 31 0, v0x1f8f9a0_0; 1 drivers
+v0x1f8dd40_0 .net "input2", 31 0, v0x1f8fad0_0; 1 drivers
+v0x1f8dde0_0 .net "input20", 31 0, v0x1f8fb80_0; 1 drivers
+v0x1f8dca0_0 .net "input21", 31 0, v0x1f8fa20_0; 1 drivers
+v0x1f8df30_0 .net "input22", 31 0, v0x1f8fcf0_0; 1 drivers
+v0x1f8e050_0 .net "input23", 31 0, v0x1f8fe10_0; 1 drivers
+v0x1f8e0d0_0 .net "input24", 31 0, v0x1f8fe90_0; 1 drivers
+v0x1f8dfb0_0 .net "input25", 31 0, v0x1f8fd70_0; 1 drivers
+v0x1f8e200_0 .net "input26", 31 0, v0x1f8fff0_0; 1 drivers
+v0x1f8e150_0 .net "input27", 31 0, v0x1f8ff40_0; 1 drivers
+v0x1f8e340_0 .net "input28", 31 0, v0x1f90130_0; 1 drivers
+v0x1f8e2a0_0 .net "input29", 31 0, v0x1f90070_0; 1 drivers
+v0x1f8e490_0 .net "input3", 31 0, v0x1f90280_0; 1 drivers
+v0x1f8e3e0_0 .net "input30", 31 0, v0x1f901e0_0; 1 drivers
+v0x1f8e5f0_0 .net "input31", 31 0, v0x1f90410_0; 1 drivers
+v0x1f8e530_0 .net "input4", 31 0, v0x1f90300_0; 1 drivers
+v0x1f8e760_0 .net "input5", 31 0, v0x1f90580_0; 1 drivers
+v0x1f8e670_0 .net "input6", 31 0, v0x1f90490_0; 1 drivers
+v0x1f8e8e0_0 .net "input7", 31 0, v0x1f90700_0; 1 drivers
+v0x1f8e7e0_0 .net "input8", 31 0, v0x1f90600_0; 1 drivers
+v0x1f8ea70_0 .net "input9", 31 0, v0x1f90890_0; 1 drivers
+v0x1f8e960 .array "mux", 0 31;
+v0x1f8e960_0 .net v0x1f8e960 0, 31 0, L_0x1f8d950; 1 drivers
+v0x1f8e960_1 .net v0x1f8e960 1, 31 0, L_0x1f90b00; 1 drivers
+v0x1f8e960_2 .net v0x1f8e960 2, 31 0, L_0x1f90bb0; 1 drivers
+v0x1f8e960_3 .net v0x1f8e960 3, 31 0, L_0x1f90c60; 1 drivers
+v0x1f8e960_4 .net v0x1f8e960 4, 31 0, L_0x1f90d10; 1 drivers
+v0x1f8e960_5 .net v0x1f8e960 5, 31 0, L_0x1f90df0; 1 drivers
+v0x1f8e960_6 .net v0x1f8e960 6, 31 0, L_0x1f90ea0; 1 drivers
+v0x1f8e960_7 .net v0x1f8e960 7, 31 0, L_0x1f90f50; 1 drivers
+v0x1f8e960_8 .net v0x1f8e960 8, 31 0, L_0x1f91050; 1 drivers
+v0x1f8e960_9 .net v0x1f8e960 9, 31 0, L_0x1f91100; 1 drivers
+v0x1f8e960_10 .net v0x1f8e960 10, 31 0, L_0x1f91210; 1 drivers
+v0x1f8e960_11 .net v0x1f8e960 11, 31 0, L_0x1f91270; 1 drivers
+v0x1f8e960_12 .net v0x1f8e960 12, 31 0, L_0x1f911b0; 1 drivers
+v0x1f8e960_13 .net v0x1f8e960 13, 31 0, L_0x1f91370; 1 drivers
+v0x1f8e960_14 .net v0x1f8e960 14, 31 0, L_0x1f914a0; 1 drivers
+v0x1f8e960_15 .net v0x1f8e960 15, 31 0, L_0x1f91550; 1 drivers
+v0x1f8e960_16 .net v0x1f8e960 16, 31 0, L_0x1f91690; 1 drivers
+v0x1f8e960_17 .net v0x1f8e960 17, 31 0, L_0x1f91740; 1 drivers
+v0x1f8e960_18 .net v0x1f8e960 18, 31 0, L_0x1f91600; 1 drivers
+v0x1f8e960_19 .net v0x1f8e960 19, 31 0, L_0x1f918e0; 1 drivers
+v0x1f8e960_20 .net v0x1f8e960 20, 31 0, L_0x1f917f0; 1 drivers
+v0x1f8e960_21 .net v0x1f8e960 21, 31 0, L_0x1f91a90; 1 drivers
+v0x1f8e960_22 .net v0x1f8e960 22, 31 0, L_0x1f91990; 1 drivers
+v0x1f8e960_23 .net v0x1f8e960 23, 31 0, L_0x1f91c00; 1 drivers
+v0x1f8e960_24 .net v0x1f8e960 24, 31 0, L_0x1f91b40; 1 drivers
+v0x1f8e960_25 .net v0x1f8e960 25, 31 0, L_0x1f91d80; 1 drivers
+v0x1f8e960_26 .net v0x1f8e960 26, 31 0, L_0x1f91cb0; 1 drivers
+v0x1f8e960_27 .net v0x1f8e960 27, 31 0, L_0x1f91f10; 1 drivers
+v0x1f8e960_28 .net v0x1f8e960 28, 31 0, L_0x1f91e30; 1 drivers
+v0x1f8e960_29 .net v0x1f8e960 29, 31 0, L_0x1f920b0; 1 drivers
+v0x1f8e960_30 .net v0x1f8e960 30, 31 0, L_0x1f91fc0; 1 drivers
+v0x1f8e960_31 .net v0x1f8e960 31, 31 0, L_0x1f92260; 1 drivers
+v0x1f8f040_0 .alias "out", 31 0, v0x1f90780_0;
+L_0x1f92160 .array/port v0x1f8e960, v0x1f8eb10_0;
+    .scope S_0x1f2a240;
+T_0 ;
+    %set/v v0x1f8f1f0_0, 1, 1;
+    %end;
+    .thread T_0;
+    .scope S_0x1f2a240;
+T_1 ;
+    %vpi_call 3 35 "$display", "Begin testing mux32to1by32";
+    %movi 8, 1442071639, 32;
+    %set/v v0x1f8f270_0, 8, 32;
+    %movi 8, 3927756126, 32;
+    %set/v v0x1f8f2f0_0, 8, 32;
+    %movi 40, 1757876931, 32;
+    %set/v v0x1f8fad0_0, 40, 32;
+    %movi 40, 2195179567, 32;
+    %set/v v0x1f90280_0, 40, 32;
+    %movi 72, 988796639, 32;
+    %set/v v0x1f90300_0, 72, 32;
+    %movi 72, 3608077012, 32;
+    %set/v v0x1f90580_0, 72, 32;
+    %movi 104, 1177869167, 32;
+    %set/v v0x1f90490_0, 104, 32;
+    %movi 104, 3104175227, 32;
+    %set/v v0x1f90700_0, 104, 32;
+    %movi 136, 142882912, 32;
+    %set/v v0x1f90600_0, 136, 32;
+    %movi 136, 4108191119, 32;
+    %set/v v0x1f90890_0, 136, 32;
+    %movi 168, 503733008, 32;
+    %set/v v0x1f8f3a0_0, 168, 32;
+    %movi 168, 1552459024, 32;
+    %set/v v0x1f8f450_0, 168, 32;
+    %movi 168, 3229632646, 32;
+    %set/v v0x1f8f4d0_0, 168, 32;
+    %movi 200, 205877288, 32;
+    %set/v v0x1f8f580_0, 200, 32;
+    %movi 200, 3439523823, 32;
+    %set/v v0x1f8f630_0, 200, 32;
+    %movi 232, 496148513, 32;
+    %set/v v0x1f8f6e0_0, 232, 32;
+    %movi 232, 4248837421, 32;
+    %set/v v0x1f8f790_0, 232, 32;
+    %movi 264, 1172621478, 32;
+    %set/v v0x1f8f840_0, 264, 32;
+    %movi 264, 659904483, 32;
+    %set/v v0x1f8f8f0_0, 264, 32;
+    %movi 264, 807874994, 32;
+    %set/v v0x1f8f9a0_0, 264, 32;
+    %movi 264, 1334666592, 32;
+    %set/v v0x1f8fb80_0, 264, 32;
+    %movi 264, 209148446, 32;
+    %set/v v0x1f8fa20_0, 264, 32;
+    %movi 264, 4282009870, 32;
+    %set/v v0x1f8fcf0_0, 264, 32;
+    %movi 296, 632958283, 32;
+    %set/v v0x1f8fe10_0, 296, 32;
+    %movi 296, 3696265758, 32;
+    %set/v v0x1f8fe90_0, 296, 32;
+    %movi 328, 695124909, 32;
+    %set/v v0x1f8fd70_0, 328, 32;
+    %movi 328, 1804606842, 32;
+    %set/v v0x1f8fff0_0, 328, 32;
+    %movi 328, 3188585808, 32;
+    %set/v v0x1f8ff40_0, 328, 32;
+    %movi 360, 1341614059, 32;
+    %set/v v0x1f90130_0, 360, 32;
+    %movi 360, 3765063431, 32;
+    %set/v v0x1f90070_0, 360, 32;
+    %movi 392, 3673718913, 32;
+    %set/v v0x1f901e0_0, 392, 32;
+    %movi 424, 3689077593, 32;
+    %set/v v0x1f90410_0, 424, 32;
+    %set/v v0x1f8eb10_0, 0, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8f270_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.0, 6;
+    %vpi_call 3 75 "$display", "Test address 0 failed";
+    %vpi_call 3 76 "$display", "Expected: %b", v0x1f8f270_0;
+    %vpi_call 3 77 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.0 ;
+    %movi 8, 1, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8f2f0_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.2, 6;
+    %vpi_call 3 83 "$display", "Test address 1 failed";
+    %vpi_call 3 84 "$display", "Expected: %b", v0x1f8f2f0_0;
+    %vpi_call 3 85 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.2 ;
+    %movi 8, 2, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8fad0_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.4, 6;
+    %vpi_call 3 91 "$display", "Test address 2 failed";
+    %vpi_call 3 92 "$display", "Expected: %b", v0x1f8fad0_0;
+    %vpi_call 3 93 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.4 ;
+    %movi 8, 3, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f90280_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.6, 6;
+    %vpi_call 3 99 "$display", "Test address 3 failed";
+    %vpi_call 3 100 "$display", "Expected: %b", v0x1f90280_0;
+    %vpi_call 3 101 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.6 ;
+    %movi 8, 4, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f90300_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.8, 6;
+    %vpi_call 3 107 "$display", "Test address 4 failed";
+    %vpi_call 3 108 "$display", "Expected: %b", v0x1f90300_0;
+    %vpi_call 3 109 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.8 ;
+    %movi 8, 5, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f90580_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.10, 6;
+    %vpi_call 3 115 "$display", "Test address 5 failed";
+    %vpi_call 3 116 "$display", "Expected: %b", v0x1f90580_0;
+    %vpi_call 3 117 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.10 ;
+    %movi 8, 6, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f90490_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.12, 6;
+    %vpi_call 3 123 "$display", "Test address 6 failed";
+    %vpi_call 3 124 "$display", "Expected: %b", v0x1f90490_0;
+    %vpi_call 3 125 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.12 ;
+    %movi 8, 7, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f90700_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.14, 6;
+    %vpi_call 3 131 "$display", "Test address 7 failed";
+    %vpi_call 3 132 "$display", "Expected: %b", v0x1f90700_0;
+    %vpi_call 3 133 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.14 ;
+    %movi 8, 8, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f90600_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.16, 6;
+    %vpi_call 3 139 "$display", "Test address 8 failed";
+    %vpi_call 3 140 "$display", "Expected: %b", v0x1f90600_0;
+    %vpi_call 3 141 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.16 ;
+    %movi 8, 9, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f90890_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.18, 6;
+    %vpi_call 3 147 "$display", "Test address 9 failed";
+    %vpi_call 3 148 "$display", "Expected: %b", v0x1f90890_0;
+    %vpi_call 3 149 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.18 ;
+    %movi 8, 10, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8f3a0_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.20, 6;
+    %vpi_call 3 155 "$display", "Test address 10 failed";
+    %vpi_call 3 156 "$display", "Expected: %b", v0x1f8f3a0_0;
+    %vpi_call 3 157 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.20 ;
+    %movi 8, 11, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8f450_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.22, 6;
+    %vpi_call 3 163 "$display", "Test address 11 failed";
+    %vpi_call 3 164 "$display", "Expected: %b", v0x1f8f450_0;
+    %vpi_call 3 165 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.22 ;
+    %movi 8, 12, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8f4d0_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.24, 6;
+    %vpi_call 3 171 "$display", "Test address 12 failed";
+    %vpi_call 3 172 "$display", "Expected: %b", v0x1f8f4d0_0;
+    %vpi_call 3 173 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.24 ;
+    %movi 8, 13, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8f580_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.26, 6;
+    %vpi_call 3 179 "$display", "Test address 13 failed";
+    %vpi_call 3 180 "$display", "Expected: %b", v0x1f8f580_0;
+    %vpi_call 3 181 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.26 ;
+    %movi 8, 14, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8f630_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.28, 6;
+    %vpi_call 3 187 "$display", "Test address 14 failed";
+    %vpi_call 3 188 "$display", "Expected: %b", v0x1f8f630_0;
+    %vpi_call 3 189 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.28 ;
+    %movi 8, 15, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8f6e0_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.30, 6;
+    %vpi_call 3 195 "$display", "Test address 15 failed";
+    %vpi_call 3 196 "$display", "Expected: %b", v0x1f8f6e0_0;
+    %vpi_call 3 197 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.30 ;
+    %movi 8, 16, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8f790_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.32, 6;
+    %vpi_call 3 203 "$display", "Test address 16 failed";
+    %vpi_call 3 204 "$display", "Expected: %b", v0x1f8f790_0;
+    %vpi_call 3 205 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.32 ;
+    %movi 8, 17, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8f840_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.34, 6;
+    %vpi_call 3 211 "$display", "Test address 17 failed";
+    %vpi_call 3 212 "$display", "Expected: %b", v0x1f8f840_0;
+    %vpi_call 3 213 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.34 ;
+    %movi 8, 18, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8f8f0_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.36, 6;
+    %vpi_call 3 219 "$display", "Test address 18 failed";
+    %vpi_call 3 220 "$display", "Expected: %b", v0x1f8f8f0_0;
+    %vpi_call 3 221 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.36 ;
+    %movi 8, 19, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8f9a0_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.38, 6;
+    %vpi_call 3 227 "$display", "Test address 19 failed";
+    %vpi_call 3 228 "$display", "Expected: %b", v0x1f8f9a0_0;
+    %vpi_call 3 229 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.38 ;
+    %movi 8, 20, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8fb80_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.40, 6;
+    %vpi_call 3 235 "$display", "Test address 20 failed";
+    %vpi_call 3 236 "$display", "Expected: %b", v0x1f8fb80_0;
+    %vpi_call 3 237 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.40 ;
+    %movi 8, 21, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8fa20_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.42, 6;
+    %vpi_call 3 243 "$display", "Test address 21 failed";
+    %vpi_call 3 244 "$display", "Expected: %b", v0x1f8fa20_0;
+    %vpi_call 3 245 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.42 ;
+    %movi 8, 22, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8fcf0_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.44, 6;
+    %vpi_call 3 251 "$display", "Test address 22 failed";
+    %vpi_call 3 252 "$display", "Expected: %b", v0x1f8fcf0_0;
+    %vpi_call 3 253 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.44 ;
+    %movi 8, 23, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8fe10_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.46, 6;
+    %vpi_call 3 259 "$display", "Test address 23 failed";
+    %vpi_call 3 260 "$display", "Expected: %b", v0x1f8fe10_0;
+    %vpi_call 3 261 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.46 ;
+    %movi 8, 24, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8fe90_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.48, 6;
+    %vpi_call 3 267 "$display", "Test address 24 failed";
+    %vpi_call 3 268 "$display", "Expected: %b", v0x1f8fe90_0;
+    %vpi_call 3 269 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.48 ;
+    %movi 8, 25, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8fd70_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.50, 6;
+    %vpi_call 3 275 "$display", "Test address 25 failed";
+    %vpi_call 3 276 "$display", "Expected: %b", v0x1f8fd70_0;
+    %vpi_call 3 277 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.50 ;
+    %movi 8, 26, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8fff0_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.52, 6;
+    %vpi_call 3 283 "$display", "Test address 26 failed";
+    %vpi_call 3 284 "$display", "Expected: %b", v0x1f8fff0_0;
+    %vpi_call 3 285 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.52 ;
+    %movi 8, 27, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f8ff40_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.54, 6;
+    %vpi_call 3 291 "$display", "Test address 27 failed";
+    %vpi_call 3 292 "$display", "Expected: %b", v0x1f8ff40_0;
+    %vpi_call 3 293 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.54 ;
+    %movi 8, 28, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f90130_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.56, 6;
+    %vpi_call 3 299 "$display", "Test address 28 failed";
+    %vpi_call 3 300 "$display", "Expected: %b", v0x1f90130_0;
+    %vpi_call 3 301 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.56 ;
+    %movi 8, 29, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f90070_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.58, 6;
+    %vpi_call 3 307 "$display", "Test address 29 failed";
+    %vpi_call 3 308 "$display", "Expected: %b", v0x1f90070_0;
+    %vpi_call 3 309 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.58 ;
+    %movi 8, 30, 5;
+    %set/v v0x1f8eb10_0, 8, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f901e0_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.60, 6;
+    %vpi_call 3 315 "$display", "Test address 30 failed";
+    %vpi_call 3 316 "$display", "Expected: %b", v0x1f901e0_0;
+    %vpi_call 3 317 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.60 ;
+    %set/v v0x1f8eb10_0, 1, 5;
+    %delay 20, 0;
+    %load/v 8, v0x1f90780_0, 32;
+    %load/v 40, v0x1f90410_0, 32;
+    %cmp/u 8, 40, 32;
+    %inv 6, 1;
+    %jmp/0xz  T_1.62, 6;
+    %vpi_call 3 323 "$display", "Test address 31 failed";
+    %vpi_call 3 324 "$display", "Expected: %b", v0x1f90410_0;
+    %vpi_call 3 325 "$display", "Actual:   %b", v0x1f90780_0;
+    %set/v v0x1f8f1f0_0, 0, 1;
+T_1.62 ;
+    %load/v 8, v0x1f8f1f0_0, 1;
+    %jmp/0xz  T_1.64, 8;
+    %vpi_call 3 331 "$display", "Tests passed";
+    %jmp T_1.65;
+T_1.64 ;
+    %vpi_call 3 333 "$display", "Tests complete";
+T_1.65 ;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "./mux.v";
+    "mux.t.v";
